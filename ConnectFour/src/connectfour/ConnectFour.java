@@ -26,6 +26,7 @@ public class ConnectFour {
      * @param args
      */
     public static void main(String[] args) {
+        //Erin was here
         ConnectFour myGame = new ConnectFour();
         myGame.getName();
         myGame.displayHelp();
