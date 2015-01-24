@@ -22,6 +22,6 @@ public class Player {
     
     
     public void displayName(){
-        System.out.println("Greetings, my name is "+ this.name);
+        System.out.println("I have " + wins + "wins and " + losses + "losses.");
     }
 }
