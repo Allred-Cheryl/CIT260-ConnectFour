@@ -20,6 +20,9 @@ public class ConnectFour {
                     +"black and Player 2 is red. Players will select a \n"
                     +"coordinate and keep alternating until one has four \n"
                     +" a row.";
+    int boardheight=6;
+    int boardwidth=7;
+    String parameters = "The current board height is " + boardheight + " and the current board width is " + boardwidth + ". The option to modify these parameters will be added soon.";
             
     /**
      *
@@ -30,6 +33,7 @@ public class ConnectFour {
         ConnectFour myGame = new ConnectFour();
         myGame.getName();
         myGame.displayHelp();
+        myGame.displaySettings();
     }  
         public void getName(){
             Scanner input = new Scanner(System.in);
@@ -41,7 +45,11 @@ public class ConnectFour {
             System.out.println("\nWelcome " + this.name +"\n");
             System.out.println(this.instructions);
         }
+        
+        public void displaySettings() {
+            boardheight=6;
+            boardwidth=7;
+            System.out.println(this.parameters);
 }
 
-    
-
+}
