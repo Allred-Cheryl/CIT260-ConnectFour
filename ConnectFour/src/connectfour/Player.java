@@ -5,6 +5,7 @@
  */
 package connectfour;
 
+
 /**
  *
  * @author Luis Peck
@@ -17,7 +18,10 @@ public class Player {
     String marker;
     
     
-    public Player(){
+    public static void main(String[] args) {
+        
+        testGetWinningStatistics();
+        
     }
     
     
@@ -60,5 +64,58 @@ public class Player {
         return playerStatistics;
         }
     
+    
+    public static void testGetWinningStatistics() {
+        
+        // test 1
+        System.out.println("getWinningStatistics - Test 1");
+        long wins = 2;
+        long losses = 7;
+        long ties = 11;
+        double expResult = 10;
+        Player instance = new Player();
+        String result = instance.getWinningStatistics(wins, losses, ties);
+        //assertEquals(expResult, result, 0.0);
+        
+        // test 2
+        System.out.println("getWinningStatistics - Test 2");
+        wins = -1;
+        losses = 5;
+        ties = 11;
+        expResult = -999;
+        result = instance.getWinningStatistics(wins, losses, ties);
+        //assertEquals(expResult, result, 0.0);
+        
+        // test 3
+        System.out.println("getWinningStatistics - Test 3");
+        wins = 5;
+        losses = -1;
+        ties = 11;
+        expResult = -999;
+        result = instance.getWinningStatistics(wins, losses, ties);
+        //assertEquals(expResult, result, 0.0);
+        
+        // test 4
+        System.out.println("getWinningStatistics - Test 4");
+        wins = 5;
+        losses = 6;
+        ties = -1;
+        expResult = -999;
+        result = instance.getWinningStatistics(wins, losses, ties);
+        //assertEquals(expResult, result, 0.0);
+        
+        // test 5
+        System.out.println("getWinningStatistics - Test 5");
+        wins = 0;
+        losses = 0;
+        ties = 0;
+        expResult = 0;
+        result = instance.getWinningStatistics(wins, losses, ties);
+        //assertEquals(expResult, result, 0.0);
+        
     }
+    
+    }
+
+
    
