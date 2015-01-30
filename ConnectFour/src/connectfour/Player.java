@@ -24,4 +24,38 @@ public class Player {
     public void displayName(){
         System.out.println("I have " + wins + "wins and " + losses + "losses.");
     }
-}
+    public String getWinningStatistics(long wins, long losses, long ties){
+        if (wins < 0){
+            System.out.println("The number of wins must be "
+                    + "greater than or equal to zero.");
+            return "-1";
+        }
+        
+        if (losses < 0){
+            System.out.println("The number of losses must be "
+                    + "greater than or equal to zero.");
+            return "-1";
+        }
+ 
+        if (ties < 0){
+            System.out.println("The number of ties must be "
+                    + "greater than or equal to zero.");
+            return "-1";
+        } 
+        
+        double totalScore = wins + losses + ties;
+        
+        if (totalScore==0){
+            return "0";
+        }
+        
+        double winRatio = wins/totalScore *100;
+        
+        String playerStatistics = "You have" + wins + "wins, "+ losses+" losses"
+                    + " and " + ties + "ties. Your win ratio is " +winRatio;
+        
+        return playerStatistics;
+        }
+    
+    }
+   
