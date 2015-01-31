@@ -115,6 +115,28 @@ public class Player {
         
     }
     
+    public double getLosingStatistics(long wins,long losses,long ties){
+        double percentage = 100;
+        if (wins < 0){
+            System.out.println("The number of wins must be "
+                    + "greater than or equal to zero.\r\n");
+            return -1;
+        }
+        
+        if (losses < 0){
+            System.out.println("The number of losses must be "
+                    + "greater than or equal to zero.\r\n");
+            return -1;
+        }
+ 
+        if (ties < 0){
+            System.out.println("The number of ties must be "
+                    + "greater than or equal to zero.\r\n");
+            return -1;
+        } 
+        double losingPercentage = (losses/(wins+losses+ties))*percentage;
+        return losingPercentage;
+    }
     }
 
 
