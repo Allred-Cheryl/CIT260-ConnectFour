@@ -13,12 +13,9 @@ public class Marker {
     // instance variables
     int row;
     int column;
-    Player player;
+    public Player player;
     
-    public Marker ();
-    
-    {
-        
+    Marker() {        
     }
     
     public void occupyLocation(Player player) {
