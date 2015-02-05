@@ -45,7 +45,7 @@ public class HelpMenuControl {
         displayHelpBorder();     
         System.out.println( 
                 "\tA real player manually takes their turn by placing their mark "
-                + "\n\tat the top of a column on the board."
+                + "\n\t in an the top of a column on the board."
                 ); 
         displayHelpBorder();
     }
@@ -75,9 +75,10 @@ public class HelpMenuControl {
         System.out.println();
         displayHelpBorder();     
         System.out.println( 
-               "\tA symbol that \"marks\" the locations in the board that are occupied "
-                + "by a player. "
-                + "\n\tThe default markers are \"B\" for BLACK and \"R\" for RED."
+               "\tA symbol that \"marks\" the locations in the board that are "
+                + "occupied by a player. "
+                + "\n\tThe default markers are \"B\" for BLACK and \"R\" "
+                + "for RED."
                 ); 
         displayHelpBorder();
     }
