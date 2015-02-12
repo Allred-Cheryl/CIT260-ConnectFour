@@ -40,8 +40,8 @@ public class GameMenuControl {
     
     
     public void displayStatistics() {
-        String playerAStatistics = this.game.playerA.getPlayerStatistics();
-        String playerBStatistics = this.game.playerB.getPlayerStatistics();
+        String playerAStatistics = this.game.playerA.getWinningStatistics();
+        String playerBStatistics = this.game.playerB.getWinningStatistics();
         System.out.println("\n\t++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         System.out.println("\t " + playerAStatistics);
         System.out.println("\n\t " + playerBStatistics);
