@@ -17,7 +17,7 @@ public class BoardView {
     public Object displayBoard(Object object) {
         this.board = (Board) object;
         this.printHeadRow();
-        this.printDividerRow;
+        this.printDividerRow();
         for (int i = 0;i < this.board.getRowCount();i++){
             Player[] rowOfLocations = this.board.getBoardLocations()[i];
             this.PrintRow(i+1, rowOfLocations);
@@ -27,7 +27,19 @@ public class BoardView {
          
         return null;
     }
+private void printDividerRow() {
 
+        // divider for first column
+        System.out.print("\n\t  |━━");
+        
+        int columnsInRow = this.board.columnCount;
+        // i starts with 1 and ends with the second to last column
+        for (int i = 1; i < columnsInRow - 1; i++) {
+            System.out.print("━━");
+        }
+        // divider for last row
+        System.out.print("━━|");
+    }
     
 
 }
