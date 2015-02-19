@@ -11,7 +11,7 @@ public class displayNames {
     
     public static void main (String[] names) {
         System.out.println("\n\t===============================================================");
-        System.out.println("\tHere is the ist of players in the game");
+        System.out.println("\tHere is the list of players in the game");
 
         for (int i = 0; i < names.length; i++) {
             if (names[i] == null) {
