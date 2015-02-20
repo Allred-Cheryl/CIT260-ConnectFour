@@ -22,7 +22,6 @@ public class GetPlayersListView {
         
     }
     
-    
     public String[] getInput() {
         
         
