@@ -123,7 +123,7 @@ public class GetPlayersListView {
         System.out.println("\n\t===============================================================");
         System.out.println("\tHere is the list of players in the game");
         
-        sortStringExchange (names);
+        sortString (names);
         
         for (int i = 0; i < names.length; i++) {
             if (names[i] == null) {
@@ -136,7 +136,7 @@ public class GetPlayersListView {
         System.out.println("\t===============================================================\n");
     }
     
-    public static void sortStringExchange( String  x [ ] )
+    public static void sortString( String  x [ ] )
       {
             int i, j;
             String temp;
