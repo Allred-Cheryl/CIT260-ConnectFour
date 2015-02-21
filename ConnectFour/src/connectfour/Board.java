@@ -26,7 +26,12 @@ public class Board {
         this.boardLocations = new Player[noRows][noColumns];
     }
     public void clearTheBoard() {
-        
+        for (int i = 0; i< this.boardLocations.length; i++) {
+                Player[] rowlocations = this.boardLocations[i];
+                for (int j = 0; j < rowlocations.length; j++){
+                    rowlocations[j]=null;
+                }
+        }
     }
 
        public void occupyLocation(Player player, int row, int column) {
