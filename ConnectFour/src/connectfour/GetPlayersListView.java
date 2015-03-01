@@ -10,11 +10,6 @@ import java.util.Scanner;
  * @author Cheryl Allred
  */
 public class GetPlayersListView {
-
-    public static void main(String[ ] args)
-     {
-             
-      }
     
     public String[] listOfPlayerNames = new String[10];
     
@@ -119,11 +114,10 @@ public class GetPlayersListView {
  *
  * @author Erin
  */
-    public void displayName(String[] names) {
+    public void displayNameList(String[] names) {
         System.out.println("\n\t===============================================================");
         System.out.println("\tHere is the list of players in the game");
         
-        sortString (names);
         
         for (int i = 0; i < names.length; i++) {
             if (names[i] == null) {
@@ -135,24 +129,5 @@ public class GetPlayersListView {
         }
         System.out.println("\t===============================================================\n");
     }
-    
-    public static void sortString( String  x [ ] )
-      {
-            int i, j;
-            String temp;
-            for ( i = 0;  i < x.length - 1;  i++ )
-            {
-                for ( j = i + 1;  j < x.length;  j++ )
-                {  
-                         if ( x [ i ].compareToIgnoreCase( x [ j ] ) > 0 )
-                          {                                             // ascending sort
-                                      temp = x [ i ];
-                                      x [ i ] = x [ j ];    // swapping
-                                      x [ j ] = temp; 
-                                      
-                           } 
-                   } 
-             } 
-      } 
     
 }
