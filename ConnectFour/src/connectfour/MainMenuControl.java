@@ -61,16 +61,16 @@ public class MainMenuControl {
         if (gameType.equals(Game.ONE_PLAYER)) {
             game = new Game(Game.ONE_PLAYER);
             player1 = new Player(Player.REGULAR_PLAYER, Game.PLAYER_A_DEFAULT_MARKER);
-            player1.setName("Player 1");
+            player1.name= "Player 1";
             player2 = new Player(Player.COMPUTER_PLAYER, Game.PLAYER_B_DEFAULT_MARKER);
-            player2.setName("Computer");
+            player2.name= "Computer";
         }
         else if (gameType.equals(Game.TWO_PLAYER)) {
             game = new Game(Game.TWO_PLAYER);
             player1 = new Player(Player.REGULAR_PLAYER, Game.PLAYER_A_DEFAULT_MARKER);
-            player1.setName("Player 1");
+            player1.name="Player 1";
             player2 = new Player(Player.REGULAR_PLAYER, Game.PLAYER_B_DEFAULT_MARKER);
-            player2.setName("Player 2");
+            player2.name="Player 2";
 
         }
       
