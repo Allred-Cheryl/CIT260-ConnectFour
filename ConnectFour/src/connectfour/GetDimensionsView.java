@@ -68,15 +68,15 @@ public class GetDimensionsView {
 
            if (rowsEntered < 3 || rowsEntered > 10) {
            new ConnectFourError().displayError(
-                   "The number of rows must be between 3 -10 and the "
-                   + "number of columns must be between 3 -10 ");
+                   "The number of rows must be between 3 - 10 and the "
+                   + "number of columns must be between 3 - 10 ");
            continue;
            }
 
            if (columnsEntered < 3 || columnsEntered > 10) {
                new ConnectFourError().displayError(
-                       "The number of rows must be between 3 -10 and the "
-                       + "number of columns must be between 3 -10 ");
+                       "The number of rows must be between 3 - 10 and the "
+                       + "number of columns must be between 3 - 10 ");
                continue;
            }
 
