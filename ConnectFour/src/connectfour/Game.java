@@ -62,6 +62,7 @@ public class Game {
         // clear the board
         this.board.clearTheBoard();
         this.status = Game.NEW_GAME;
+        
     }
 
     public void setPlayingOrder(Player player1, Player player2) {

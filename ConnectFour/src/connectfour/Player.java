@@ -33,65 +33,6 @@ public class Player {
         this.marker = marker;
     }
     
-    public String getName() {
-        return name;
-    }
-
-  
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPlayerType() {
-        return playerType;
-    }
-
-    public void setPlayerType(String playerType) {
-        this.playerType = playerType;
-    }
-
-    public long getWins() {
-        return wins;
-    }
-
-    public void setWins(long wins) {
-        this.wins = wins;
-    }
-
-    public long getLosses() {
-        return losses;
-    }
-
-    public void setLosses(long losses) {
-        this.losses = losses;
-    }
-
-    public String getMarker() {
-        return marker;
-    }
-
-    public void setMarker(String marker) {
-        this.marker = marker;
-    }
-
-    public long getTies() {
-        return ties;
-    }
-
-    public void setTies(long ties) {
-        this.ties = ties;
-    }
-    
-    public static void main(String[] args) {
-        
-        
-        
-    }
-    
-    
-    public void displayName(){
-        System.out.println("I have " + wins + "wins and " + losses + "losses.\r\n");
-    }
     private double getWinningStatistics(){
         
         char oneHundred = 100;
@@ -120,7 +61,7 @@ public class Player {
             return 0;
         }
         
-        double winRatio = wins/totalScore * oneHundred;
+        double winRatio = this.wins/totalScore * oneHundred;
         
         return winRatio;
         }
