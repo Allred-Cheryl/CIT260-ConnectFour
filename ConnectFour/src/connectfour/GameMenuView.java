@@ -22,12 +22,13 @@ private Game game;
         {"D", "Display the board"},
         {"N", "New Game"},
         {"R", "Report stastics"},
-        //{"P", "Change game preferences"},
+        {"P", "Change game preferences"},
         {"H", "Help"},
         {"Q", "QUIT"}
     };
 
     public GameMenuView(Game game) {
+        this.game = game;
         this.gameMenuControl = new GameMenuControl(game);
         
     }
@@ -59,7 +60,8 @@ private Game game;
                 case "R":
                     gameMenuControl.displayStatistics();
                     break;
-               //case "P" here once game menu preferences is complete
+                case "P":
+                    gameMenuControl.displayPreferencesMenu();
                 case "H":
                     gameMenuControl.displayHelpMenu();
                     break;
