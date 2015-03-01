@@ -6,8 +6,7 @@
 package connectfour;
 
 import java.awt.Dimension;
-import java.util.Scanner;
-import java.util.regex.Pattern;
+
 
 /**
  *
@@ -24,17 +23,48 @@ public class GamePreferencesMenuControl {
         return game;
     }
     
-    public void setGame(Game game) {
-        return game;
-    }
     
     public void getMarker(Player player){
-        System.out.println("\n\tgetMarker called");
+        GetMarkerView getMarkerView = new GetMarkerView(this.game);
+        String marker = getMarkerView.getInput(player);
+        
+        if (marker == null){
+            return;
+        }
+        
+        player.marker = marker;
+        
+        return;
     }
     
-    public boolean getDimensions(){
+    public void getDimensions(){
         
-        System.out.println("\n\tgetDimensions called");
-        return true;
+        if(this.game.status.equals(Game.PLAYING)){
+            new ConnectFourError().displayError("You can not change "
+            + "dimensions once game has started. "
+            + "\nBegin new game to change dimensions. ");
+            return;
+        }
+        
+        GetDimensionsView getDimensionsView = new GetDimensionsView(this.game);
+        Dimension dimension = getDimensionsView.getInput();
+        if (dimension == null){
+            return;
+        }
+        
+        int boardRowCount = dimension.width;
+        int boardColumnCount = dimension.height;
+        
+        if (boardRowCount == this.game.board.getRowCount() &&
+            boardColumnCount == this.game.board.getColumnCount()){
+            return;
+        }
+        
+        Player[][] boardLocations = new Player[boardRowCount][boardColumnCount];
+        this.game.board.getBoardDimensions().setLocation(boardRowCount,boardRowCount);
+        this.game.board.setBoardLocations(boardLocations);
+        
+        return;
+        
     }
 }
