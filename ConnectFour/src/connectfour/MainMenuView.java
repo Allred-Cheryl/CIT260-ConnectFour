@@ -39,6 +39,9 @@ public class MainMenuView {
             command = command.trim().toUpperCase();
             
             switch (command) {
+                case "N":
+                    this.mainMenuControl.createPlayerList();
+                    break;
                 case "1":
                     this.mainMenuControl.startGame(1);
                     break;

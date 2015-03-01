@@ -39,7 +39,7 @@ public class GameMenuControl {
        if (this.game.gameType.equals(Game.TWO_PLAYER)){
            returnValue = this.regularPlayerTurn(this.game.currentPlayer);
            if (returnValue < 0 || this.gameOver(this.game.currentPlayer)){
-               return
+               return;
            }
            this.displayBoard();
            this.alternatePlayers();
@@ -94,13 +94,13 @@ public class GameMenuControl {
     
     
     public void displayPreferencesMenu(){
-        GamePreferencesMenuView gamePreferenceMenuView = new GamePreferencesMenuView(this.game);
+        GamePreferencesMenueView gamePreferenceMenuView = new GamePreferencesMenueView(this.game);
         gamePreferenceMenuView.getInput();
     }
     
     public void displayHelpMenu() {
         HelpMenuView helpMenu = new HelpMenuView();
-        helpMenuView.getInput();
+        HelpMenuView.getInput();
     }
 
     private boolean gameOver(Player player){
@@ -139,7 +139,7 @@ public class GameMenuControl {
         
         GetLocationView getLocationView = new GetLocationView(this.game);
         Point location = getLocationView.getInput();
-        if (location==null){
+        if (location == null){
             return -1;
         }
         

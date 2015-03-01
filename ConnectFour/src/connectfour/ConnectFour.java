@@ -13,6 +13,10 @@ import java.util.Scanner;
  */
 public class ConnectFour {
 
+    static void setPlayerList(Player[] playerList) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     //Instance variables
     String name;
     String instructions = "This is a game of Connect 4\n"

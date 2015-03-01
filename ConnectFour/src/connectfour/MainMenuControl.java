@@ -11,7 +11,21 @@ import java.util.Scanner;
  */
 public class MainMenuControl {
     
-    
+    public void createPlayerList(){
+        GetPlayersListView getPlayersListView = new GetPlayersListView();
+        String[] listOfPlayersNames = getPlayersListView.getInput();
+        
+        Player[] playerList = new Player[listOfPlayersNames.length];
+        
+        for (int i = 0; i < playerList.length; i++){
+            String playersName = listOfPlayersNames[i];
+            Player newPlayer = new Player();
+            newPlayer.name = playersName;
+            playerList[i] = newPlayer;
+        }
+        
+        ConnectFour.setPlayerList(playerList);
+    }
      
     public void startGame(long noPlayers) {
                 
