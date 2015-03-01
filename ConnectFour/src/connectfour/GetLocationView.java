@@ -16,8 +16,10 @@ import java.util.Scanner;
 public class GetLocationView {
     private Game game;
     
-    public Object GetLocationView(Game game) {
+    public GetLocationView(Game game) {
         this.game = game;
+    }
+    public Point getInput(){
         Scanner inFile = new Scanner(System.in); // get input file 
 
         String[] coordinates;
