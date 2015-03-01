@@ -42,8 +42,8 @@ public class Game {
        this.playerA = new Player();
        this.playerB = new Player();
        
-       this.playerA.setMarker(Game.PLAYER_A_DEFAULT_MARKER);
-       this.playerB.setMarker(Game.PLAYER_B_DEFAULT_MARKER);
+       this.playerA.marker = Game.PLAYER_A_DEFAULT_MARKER;
+       this.playerB.marker = Game.PLAYER_B_DEFAULT_MARKER;
     }
 
     public Game(String gameType) {
@@ -88,24 +88,24 @@ public class Game {
             this.loser = this.playerA;
         }
 
-        long noWins = this.winner.getWins();
+        long noWins = this.winner.wins;
         noWins++;
-        this.winner.setWins(noWins);
-        long noLosses = this.loser.getLosses();
+        this.winner.wins = noWins;
+        long noLosses = this.loser.losses;
         noLosses++;
-        this.loser.setLosses(noLosses);
+        this.loser.losses= noLosses;
 
         this.status = Game.WINNER;
         
     }
 
     public void recordTie() {
-        long player1Ties = this.playerA.getTies();
+        long player1Ties = this.playerA.ties;
         player1Ties++;
-        this.playerA.setTies(player1Ties);
-        long player2Ties = this.playerB.getTies();
+        this.playerA.ties=player1Ties;
+        long player2Ties = this.playerB.ties;
         player2Ties++;
-        this.playerB.setTies(player2Ties);
+        this.playerB.ties = player2Ties;
 
         this.status = Game.TIE;
        
@@ -115,8 +115,8 @@ public class Game {
 
     public String getWinningMessage () {
         return "\n\t*******************************************************************************"
-             + "\n\t Congratulations " + winner.getName() + "! You won the game."
-             + "\n\t Sorry " + loser.getName() + ", You are the loser." 
+             + "\n\t Congratulations " + winner.name+ "! You won the game."
+             + "\n\t Sorry " + loser.name + ", You are the loser." 
              + "\n\t*******************************************************************************";
     }
 
