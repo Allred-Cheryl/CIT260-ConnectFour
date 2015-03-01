@@ -74,7 +74,7 @@ public class GetPlayersListView {
         
 
         newNameList = this.sortList(newNameList);
-        this.displayName(newNameList); // display the list of names
+        this.displayNameList(newNameList); // display the list of names
         
         return newNameList;
     }
