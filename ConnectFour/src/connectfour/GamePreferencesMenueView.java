@@ -24,6 +24,7 @@ public class GamePreferencesMenueView {
 
     public GamePreferencesMenueView(Game game) {
         this.game = game;
+        gamePreferenceControl = new GamePreferencesMenuControl(game);
     }
 
     
