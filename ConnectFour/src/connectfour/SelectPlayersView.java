@@ -5,6 +5,8 @@
  */
 package connectfour;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Luis
@@ -16,7 +18,7 @@ public class SelectPlayersView {
 
     public SelectPlayersView(Game game) {
         this.game = game;
-        playerList = ConnectFour.getplayerList();
+        playerList = ConnectFour.getPlayerList();
     }
 
     
