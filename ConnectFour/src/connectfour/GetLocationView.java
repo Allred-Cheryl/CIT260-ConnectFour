@@ -16,7 +16,7 @@ import java.util.Scanner;
 public class GetLocationView {
     private Game game;
     
-    public Object getLocationView(Game game) {
+    public Object GetLocationView(Game game) {
         this.game = game;
         Scanner inFile = new Scanner(System.in); // get input file 
 
