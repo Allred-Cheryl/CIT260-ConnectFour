@@ -16,7 +16,7 @@ public class MainMenuView {
         {"1", "One player game"},
         {"2", "Two player game"},
         {"H", "Help"},
-        {"X", "Exit Tic-Tac-Toe"}
+        {"X", "Exit Connect Four"}
     }; 
   
     private final MainMenuControl mainMenuControl = new MainMenuControl();
