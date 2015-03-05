@@ -15,10 +15,10 @@ import java.util.Random;
  * @author Erin
  */
 public class GameMenuControl {
-    private Game game;
-    private Board board;
+    private final Game game;
+    private final Board board;
     private GetLocationView getLocationView;
-    private BoardView boardView = new BoardView();
+    private final BoardView boardView = new BoardView();
 
     public GameMenuControl(Game game) {
         this.game = game;
@@ -62,7 +62,6 @@ public class GameMenuControl {
            System.out.println("\n\tThe computer also took it's turn");
            this.displayBoard();
            if(returnValue < 0 || this.gameOver(this.game.otherPlayer)){
-               return;
            }
        }
     }
@@ -84,7 +83,8 @@ public class GameMenuControl {
     
     
     public void displayStatistics() {
-        String playerAStatistics = this.game.playerA.getPlayerStatistics();
+        String playerAStatistics;
+        playerAStatistics = this.game.playerA.getPlayerStatistics();
         String playerBStatistics = this.game.playerB.getPlayerStatistics();
         System.out.println("\n\t++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         System.out.println("\t " + playerAStatistics);
@@ -151,7 +151,6 @@ public class GameMenuControl {
     private void computerTakesTurn(Player player){
         Point location = this.getComputersSelection();
         this.game.board.occupyLocation(player, location.x, location.y);
-        return;
     }
     
     public void alternatePlayers(){
@@ -189,12 +188,10 @@ public class GameMenuControl {
         
         Player[][] locations = this.board.getBoardLocations();
         
-        for (int row=0; row < locations.length; row++){
-            Player[] rowLocations = locations[row];
-            
-            for (int col = 0; col < rowLocations.length; col++){
+        for (Player[] rowLocations : locations) {
+            for (int col = 0; col < rowLocations.length; col++) {
                 Player location = rowLocations[col];
-                if (locations[row][col]== null){
+                if (rowLocations[col] == null) {
                     return false;
                 }
             }

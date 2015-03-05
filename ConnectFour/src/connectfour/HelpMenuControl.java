@@ -19,7 +19,7 @@ public class HelpMenuControl {
         System.out.println();
         this.displayHelpBorder();             
         System.out.println( 
-                "\tThe game board for Connect Four. It consist of a grid of "
+                "\tThe game board for Connect Four. It consists of a grid of "
                 + "\n\tlocations. Players drop their marker from the top of a column "
                 + "\n\ton the board in an effort to win the game. The default board is "
                 + "\n\t6 rows by 7 columns.");
