@@ -5,11 +5,14 @@
  */
 package connectfour;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Cheryl Allred
  */
-public class BoardView {
+public class BoardView implements Serializable 
+{
     
     
     Board board;

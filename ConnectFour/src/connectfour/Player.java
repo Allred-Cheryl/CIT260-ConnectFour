@@ -100,6 +100,10 @@ public class Player {
         double losingPercentage = (losses/(wins+losses+ties))*percentage;
         return losingPercentage;
     }
+
+    String getPlayerStatistics() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     }
 
 
