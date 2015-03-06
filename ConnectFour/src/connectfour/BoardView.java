@@ -44,15 +44,15 @@ private void printHeadRow(){
 private void printDividerRow() {
 
         // divider for first column
-        System.out.print("\n\t  |━━");
+        System.out.print("\n\t  |━━━");
         
         int columnsInRow = this.board.columnCount;
         // i starts with 1 and ends with the second to last column
         for (int i = 1; i < columnsInRow - 1; i++) {
-            System.out.print("━━");
+            System.out.print("━━━");
         }
         // divider for last row
-        System.out.print("━━|");
+        System.out.print("━━━━|");
     }
 private void printRow(int rowNumber,Player[] rowLocations){
     
@@ -60,7 +60,7 @@ private void printRow(int rowNumber,Player[] rowLocations){
     if (rowLocations[0] != null){
         letter = rowLocations[0].marker;
     }
-    System.out.print("\n\t" + rowNumber + " | " + letter + "  |");
+    System.out.print("\n\t" + rowNumber + " | " + letter + "   |");
     
 
     for (int i =1; i< rowLocations.length;i++){
@@ -69,7 +69,7 @@ private void printRow(int rowNumber,Player[] rowLocations){
          } else {
              letter = rowLocations[i].marker;
          }
-         System.out.print(" " + letter + " |");
+         System.out.print(" " + letter + "  |");
          }
 }
     
