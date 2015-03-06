@@ -57,7 +57,7 @@ public class GetPlayersListView {
             }
 
             if (playersName.toUpperCase().equals("Q")) { // quit?
-                done = true;
+                done = true; 
                 break;
             } 
             
