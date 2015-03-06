@@ -11,8 +11,7 @@ package connectfour;
  */
 public class ConnectFourError {
     
-    public static void main(String[] args) {
-    }
+ 
     
     public Object displayError(Object object){
         String message = (String) object;
