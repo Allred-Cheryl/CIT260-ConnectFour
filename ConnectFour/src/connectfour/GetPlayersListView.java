@@ -4,12 +4,13 @@
  * and open the template in the editor.
  */
 package connectfour;
+import java.io.Serializable;
 import java.util.Scanner;
 /**
  *
  * @author Cheryl Allred
  */
-public class GetPlayersListView {
+public class GetPlayersListView implements Serializable{
     
     public String[] listOfPlayerNames = new String[10];
     
