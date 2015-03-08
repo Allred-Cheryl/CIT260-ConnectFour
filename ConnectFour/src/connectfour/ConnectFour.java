@@ -5,12 +5,13 @@
  */
 package connectfour;
 
+import java.io.Serializable;
 /**
  *
  * @author Luis
  * Fixed minor spelling issue/grammar by Kevin on 03/07/15
  */
-public class ConnectFour {
+public class ConnectFour implements Serializable {
     
     private static Player[] playerList;
 
