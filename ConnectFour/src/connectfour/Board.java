@@ -5,14 +5,15 @@
  */
 package connectfour;
 import java.awt.Point;
+import java.io.Serializable;
 import javax.swing.table.AbstractTableModel;
 /**
  *
  * @author Erin
  */
-public class Board extends AbstractTableModel {
+public class Board extends AbstractTableModel implements Serializable {
     
-    public int rowCount = 6;
+    public int rowCount;
     public int columnCount = 7;
     
     private String name;
@@ -20,9 +21,11 @@ public class Board extends AbstractTableModel {
     public Player[][] boardLocations;
     
    public Board() {
+        this.rowCount = 6;
    } 
 
     public Board(int noRows, int noColumns) {
+        this.rowCount = 6;
         this.boardDimensions.setLocation(noRows, noRows);
         this.boardLocations = new Player[noRows][noColumns];
     }
