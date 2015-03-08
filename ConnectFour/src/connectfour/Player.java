@@ -68,7 +68,7 @@ public class Player implements Serializable{
         return winRatio;
         }
     
-    public String getPlayerStatics(){
+    public String getPlayerStastics(){
         String playerStatistics =
                 this.name + "has won "
                 + this.getWinningStatistics() + "% of the games."

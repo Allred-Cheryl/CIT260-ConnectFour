@@ -56,7 +56,7 @@ private Game game;
                     gameMenuControl.startNewGame();
                     break;
                 case "R":
-                    gameMenuControl.displayStatistics();
+                    this.displayStatistics();
                     break;
                 case "P":
                     gameMenuControl.displayPreferencesMenu();
@@ -83,5 +83,12 @@ private Game game;
         }
         System.out.println("\t===============================================================\n");
     }
-  
+      private void displayStatistics() {
+        String playerAStatistics = this.game.getPlayerA().getPlayerStastics();
+        String playerBStatistics = this.game.getPlayerB().getPlayerStastics();
+        System.out.println("\n\t++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        System.out.println("\t " + playerAStatistics);
+        System.out.println("\n\t " + playerBStatistics);
+        System.out.println("\t+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+    }
 }

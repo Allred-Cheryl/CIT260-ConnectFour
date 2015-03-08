@@ -24,15 +24,15 @@ public class Game {
     public static final String ERROR = "ERROR";
     public static final String EXIT = "EXIT";
 
-    public String gameType;
-    public Player playerA;
-    public Player playerB;
-    public Player currentPlayer;
-    public Player otherPlayer;
-    public Player winner;
-    public Player loser;
-    public String status;
-    public Board board;
+    String gameType;
+    Player playerA;
+    Player playerB;
+    Player currentPlayer;
+    Player otherPlayer;
+    private Player winner;
+    private Player loser;
+    String status;
+    Board board;
    
 
     
@@ -53,6 +53,78 @@ public class Game {
         this.board = new Board(7, 6);
         
     }
+    public String getGameType() {
+        return gameType;
+    }
+
+    public void setGameType(String gameType) {
+        this.gameType = gameType;
+    }
+
+    public Player getPlayerA() {
+        return playerA;
+    }
+
+    public void setPlayerA(Player playerA) {
+        this.playerA = playerA;
+    }
+
+    public Player getPlayerB() {
+        return playerB;
+    }
+
+    public void setPlayerB(Player playerB) {
+        this.playerB = playerB;
+    }
+
+    public Player getCurrentPlayer() {
+        return currentPlayer;
+    }
+
+    public void setCurrentPlayer(Player currentPlayer) {
+        this.currentPlayer = currentPlayer;
+    }
+
+    public Player getOtherPlayer() {
+        return otherPlayer;
+    }
+
+    public void setOtherPlayer(Player otherPlayer) {
+        this.otherPlayer = otherPlayer;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public Player getWinner() {
+        return winner;
+    }
+
+    public void setWinner(Player winner) {
+        this.winner = winner;
+    }
+
+    public Player getLoser() {
+        return loser;
+    }
+
+    public void setLoser(Player loser) {
+        this.loser = loser;
+    }
+
+    public Board getBoard() {
+        return board;
+    }
+
+    public void setBoard(Board board) {
+        this.board = board;
+    }
+
 
 
     public void start() {
