@@ -4,12 +4,12 @@
  * and open the template in the editor.
  */
 package connectfour;
-import java.util.Scanner;
+import java.io.Serializable;
 /**
  *
  * @author Cheryl Allred
  */
-public class MainMenuControl {
+public class MainMenuControl implements Serializable {
     
     public void createPlayerList(){
         GetPlayersListView getPlayersListView = new GetPlayersListView();

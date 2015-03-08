@@ -4,12 +4,13 @@
  * and open the template in the editor.
  */
 package connectfour;
+import java.io.Serializable;
 import java.util.Scanner;
 /**
  *
  * @author Cheryl Allred
  */
-public class MainMenuView {
+public class MainMenuView implements Serializable{
     
     
     private static final String[][] menuItems = {
@@ -55,11 +56,9 @@ public class MainMenuView {
                     break;
                 default: 
                     new ConnectFourError().displayError("Invalid command. Please enter a valid command.");
-                    continue;                    
             }
         } while (!command.equals("X"));
 
-        return;
     }
     
 

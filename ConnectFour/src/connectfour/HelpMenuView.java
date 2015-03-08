@@ -70,11 +70,9 @@ public class HelpMenuView  {
                     break;
                 default: 
                     new ConnectFourError().displayError("Invalid command. Please enter a valid command.");
-                    continue;
             }
         } while (!command.equals("Q"));  
         
-         return;
     }
 
         // A function to display the help menu

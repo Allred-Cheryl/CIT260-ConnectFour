@@ -5,16 +5,17 @@
  */
 package connectfour;
 
+import java.io.Serializable;
 import java.util.Scanner;
 
 /**
  *
  * @author Luis
  */
-public class SelectPlayersView {
+public class SelectPlayersView implements Serializable{
     
-    private Game game;
-    private Player[] playerList;
+    private final Game game;
+    private final Player[] playerList;
 
     public SelectPlayersView(Game game) {
         this.game = game;

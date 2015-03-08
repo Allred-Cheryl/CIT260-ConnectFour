@@ -5,12 +5,14 @@
  */
 package connectfour;
 
+import java.io.Serializable;
+
 
 /**
  *
  * @author Luis Peck
  */
-public class Player {
+public class Player implements Serializable{
     
     public static final String REGULAR_PLAYER = "REGULAR";
     public static final String COMPUTER_PLAYER = "COMPUTER"; 

@@ -5,11 +5,13 @@
  */
 package connectfour;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Cheryl Allred
  */
-public class Marker {
+public class Marker implements Serializable{
     // instance variables
     int row;
     int column;
