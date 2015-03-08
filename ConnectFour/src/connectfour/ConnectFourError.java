@@ -5,11 +5,12 @@
  */
 package connectfour;
 
+import java.io.Serializable;
 /**
  *
  * @author Luis
  */
-public class ConnectFourError {
+public class ConnectFourError implements Serializable {
     
  
     
