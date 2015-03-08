@@ -6,6 +6,7 @@
 // Test Matrix at https://docs.google.com/document/d/1w9v48zJN81IyLJq5gkpEoRZmjPCXXgMBTYZF0ze99TY/edit?usp=sharing
 package connectfour;
 import java.util.Scanner;
+import java.io.Serializable;
 /**
  *
  * @author Cheryl Allred

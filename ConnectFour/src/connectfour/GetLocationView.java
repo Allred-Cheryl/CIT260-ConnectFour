@@ -6,6 +6,7 @@
 package connectfour;
 import java.awt.Point;
 import java.util.Scanner;
+import java.io.Serializable;
 
 
     
