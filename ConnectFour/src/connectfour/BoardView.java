@@ -17,7 +17,7 @@ public class BoardView implements Serializable
     
     Board board;
     
-    public Object displayBoard(Object object) {
+    public Object displayBoard(Object object) { 
         this.board = (Board) object;
         this.printHeadRow();
         this.printDividerRow();
