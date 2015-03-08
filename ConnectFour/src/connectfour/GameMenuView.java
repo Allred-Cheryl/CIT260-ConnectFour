@@ -10,13 +10,13 @@ import java.util.Scanner;
 /**
  *
  * @author Erin
+ * Updated for Cohesion and Serialization by Kevin 03/07/15
  */
 public class GameMenuView {
     
 private Game game;
-    private GameMenuControl gameMenuControl ; 
-
-
+    private GameMenuControl gameMenuControl; 
+    
     private final static String[][] menuItems = {
         {"T", "Take your turn"},
         {"D", "Display the board"},
@@ -32,8 +32,6 @@ private Game game;
         this.gameMenuControl = new GameMenuControl(game);
         
     }
-
-    
     
     public void getInput() {
    
@@ -75,8 +73,6 @@ private Game game;
 
         
     }
-    
-
 
     public final void display() {
         System.out.println("\n\t===============================================================");

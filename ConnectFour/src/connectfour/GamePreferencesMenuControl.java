@@ -6,13 +6,15 @@
 package connectfour;
 
 import java.awt.Dimension;
+import java.io.Serializable;
 
 
 /**
  *
  * @author Luis
+ * Updated for Cohesion and Serialization by Kevin 03/07/15
  */
-public class GamePreferencesMenuControl {
+public class GamePreferencesMenuControl implements Serializable {
     private Game game;
     
     public GamePreferencesMenuControl(Game game){
@@ -22,7 +24,6 @@ public class GamePreferencesMenuControl {
     public Game getGame(){
         return game;
     }
-    
     
     public void getMarker(Player player){
         GetMarkerView getMarkerView = new GetMarkerView(this.game);
@@ -34,7 +35,6 @@ public class GamePreferencesMenuControl {
         
         player.marker = marker;
         
-        return;
     }
     
     public void getDimensions(){
@@ -63,8 +63,6 @@ public class GamePreferencesMenuControl {
         Player[][] boardLocations = new Player[boardRowCount][boardColumnCount];
         this.game.board.getBoardDimensions().setLocation(boardRowCount,boardRowCount);
         this.game.board.setBoardLocations(boardLocations);
-        
-        return;
         
     }
 }

@@ -6,13 +6,15 @@
 package connectfour;
 import java.awt.Dimension;
 import java.util.Scanner;
+import java.io.Serializable;
         
 
 /**
  *
  * @author Luis
+ * Updated for Cohesion and Serialization by Kevin 03/07/15
  */
-public class GetDimensionsView {
+public class GetDimensionsView implements Serializable {
     
     private Game game;
     
@@ -85,8 +87,6 @@ public class GetDimensionsView {
            dimension = new Dimension(rowsEntered, columnsEntered);
 
        } while (dimension == null);
-
-
 
        return dimension;
     }

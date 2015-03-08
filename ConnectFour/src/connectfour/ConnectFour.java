@@ -5,11 +5,10 @@
  */
 package connectfour;
 
-import java.util.Scanner;
-
 /**
  *
  * @author Luis
+ * Fixed minor spelling issue/grammar by Kevin on 03/07/15
  */
 public class ConnectFour {
     
@@ -22,7 +21,7 @@ public class ConnectFour {
                     +"You will play against another player. Player 1 is \n"
                     +"black and Player 2 is red. Players will select a \n"
                     +"coordinate and keep alternating until one has four \n"
-                    +" a row.";
+                    +"in a row.";
     
     public ConnectFour(){
         

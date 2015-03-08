@@ -6,12 +6,14 @@
 package connectfour;
 
 import java.util.Scanner;
+import java.io.Serializable;
 
 /**
  *
  * @author Luis
+ * Updated for Cohesion and Serialization by Kevin 03/07/15
  */
-public class GamePreferencesMenueView {
+public class GamePreferencesMenueView implements Serializable {
     Game game;
     private GamePreferencesMenuControl gamePreferenceControl = new GamePreferencesMenuControl(game);
     
@@ -27,7 +29,6 @@ public class GamePreferencesMenueView {
         gamePreferenceControl = new GamePreferencesMenuControl(game);
     }
 
-    
     public void getInput() {       
         String command;
         Scanner inFile = new Scanner(System.in);
@@ -57,11 +58,8 @@ public class GamePreferencesMenueView {
             }
         } while (!command.equals("Q"));
 
-        return;
     }
-    
-    
-        
+  
     public final void display() {
         System.out.println("\n\t===============================================================");
         System.out.println("\tEnter the letter associated with one of the following commands:");
@@ -71,6 +69,5 @@ public class GamePreferencesMenueView {
         }
         System.out.println("\t===============================================================\n");
     }
-            
-    
+           
 }
