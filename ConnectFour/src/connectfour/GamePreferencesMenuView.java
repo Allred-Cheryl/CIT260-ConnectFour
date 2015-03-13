@@ -13,7 +13,7 @@ import java.io.Serializable;
  * @author Luis
  * Updated for Cohesion and Serialization by Kevin 03/07/15
  */
-public class GamePreferencesMenuView implements Serializable {
+public class GamePreferencesMenuView extends Menu {
     Game game;
     private GamePreferencesMenuControl gamePreferenceControl = new GamePreferencesMenuControl(game);
     
@@ -28,7 +28,7 @@ public class GamePreferencesMenuView implements Serializable {
         this.game = game;
         gamePreferenceControl = new GamePreferencesMenuControl(game);
     }
-
+    @Override
     public void getInput() {       
         String command;
         Scanner inFile = new Scanner(System.in);

@@ -12,7 +12,7 @@ import java.util.Scanner;
  * @author Erin
  * Updated for Cohesion and Serialization by Kevin 03/07/15
  */
-public class GameMenuView {
+public class GameMenuView extends Menu {
     
 private Game game;
     private GameMenuControl gameMenuControl; 
@@ -32,7 +32,7 @@ private Game game;
         this.gameMenuControl = new GameMenuControl(game);
         
     }
-    
+    @Override
     public void getInput() {
    
         String command;

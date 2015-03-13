@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author Cheryl Allred
  */
-public class MainMenuView implements Serializable{
+public class MainMenuView extends Menu {
     
     
     private static final String[][] menuItems = {
@@ -23,10 +23,10 @@ public class MainMenuView implements Serializable{
     private final MainMenuControl mainMenuControl = new MainMenuControl();
     
     public MainMenuView() {
-
+        super(MainMenuView.menuItems);
     }
  
-    
+    @Override
     public void getInput() {       
 
         String command;
