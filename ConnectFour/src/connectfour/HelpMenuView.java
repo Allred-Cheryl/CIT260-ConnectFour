@@ -1,41 +1,36 @@
 /*
- * To change this template, choose Tools | Templates
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package connectFour;
+package connectfour;
 
 import java.util.Scanner;
 
-
-
 /**
  *
- * @author Cheryl Allred
+ * @author Ben
  */
 public class HelpMenuView extends Menu {
-        
-    private final static String[][] menuItems = {
-        // menu items
-        {"B", "The board"},
-        {"C", "A computer player"}, 
-        {"G", "Connect 4 game"},
-        {"L", "A location"},
-        {"M", "A marker"},
-        {"R", "A regular player"},        
-        {"Q", "Quit Help"}        
-    };
     
-    // Create instance of the HelpMenuControl (action) class
-    public HelpMenuControl helpMenuControl = new HelpMenuControl();
-    
-    // default constructor
     public HelpMenuView() {
         super(HelpMenuView.menuItems);
     } 
+    private final static String [][] menuItems = {
+        // menu items
+        {"B", "The board"},
+        {"C", "A computer player"},
+        {"G", "Connect 4 Game"},
+        {"L", "A location"},
+        {"M", "A marker"},
+        {"R", "A regular player"},
+        {"Q", "Quit Help"}       
+    };
+   
+    public HelpMenuControl helpMenuControl = new HelpMenuControl();
     
-    // A function to get the player's input selection
-    public void getInput() {       
-              
+    @Override
+    public void getInput() {
         String command;
         Scanner inFile = new Scanner(System.in);
         
@@ -74,6 +69,4 @@ public class HelpMenuView extends Menu {
         } while (!command.equals("Q"));  
         
     }
-
-}
-
+    }
