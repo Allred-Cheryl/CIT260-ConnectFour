@@ -28,6 +28,10 @@ public class GamePreferencesMenuView extends Menu {
         this.game = game;
         gamePreferenceControl = new GamePreferencesMenuControl(game);
     }
+
+    GamePreferencesMenuView() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     @Override
     public void getInput() {       
         String command;

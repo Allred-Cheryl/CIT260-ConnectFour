@@ -5,7 +5,6 @@
 package connectFour;
 
 import java.util.Scanner;
-import java.io.Serializable;
 
 
 
