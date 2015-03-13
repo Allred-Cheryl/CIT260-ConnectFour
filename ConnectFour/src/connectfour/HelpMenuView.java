@@ -13,7 +13,7 @@ import java.io.Serializable;
  *
  * @author Cheryl Allred
  */
-public class HelpMenuView  {
+public class HelpMenuView extends Menu {
         
     private final static String[][] menuItems = {
         // menu items
@@ -31,7 +31,7 @@ public class HelpMenuView  {
     
     // default constructor
     public HelpMenuView() {
-        
+        super(HelpMenuView.menuItems);
     } 
     
     // A function to get the player's input selection
@@ -77,15 +77,7 @@ public class HelpMenuView  {
     }
 
         // A function to display the help menu
-    public final void display() {
-        System.out.println("\n\t===============================================================");
-        System.out.println("\tEnter the letter associated with one of the following commands:");
 
-        for (String[] menuItem : HelpMenuView.menuItems) {
-            System.out.println("\t   " + menuItem[0] + "\t" + menuItem[1]);
-        }
-        System.out.println("\t===============================================================\n");
-    }
   
 }
 

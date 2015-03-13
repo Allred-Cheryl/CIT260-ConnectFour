@@ -60,18 +60,5 @@ public class MainMenuView implements Serializable{
         } while (!command.equals("X"));
 
     }
-    
 
-    
-    
-   public final void display() {
-        System.out.println("\n\t===============================================================");
-        System.out.println("\tEnter the letter associated with one of the following commands:");
-
-        for (String[] menuItem : MainMenuView.menuItems) {
-            System.out.println("\t   " + menuItem[0] + "\t" + menuItem[1]);
-        }
-        System.out.println("\t===============================================================\n");
-    }   
-    
 }
