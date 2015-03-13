@@ -13,7 +13,7 @@ import java.io.Serializable;
  * @author Luis
  * Updated for Cohesion and Serialization by Kevin 03/07/15
  */
-public class GamePreferencesMenueView implements Serializable {
+public class GamePreferencesMenuView implements Serializable {
     Game game;
     private GamePreferencesMenuControl gamePreferenceControl = new GamePreferencesMenuControl(game);
     
@@ -24,7 +24,7 @@ public class GamePreferencesMenueView implements Serializable {
         {"Q", "Return to game menu"}
     };
 
-    public GamePreferencesMenueView(Game game) {
+    public GamePreferencesMenuView(Game game) {
         this.game = game;
         gamePreferenceControl = new GamePreferencesMenuControl(game);
     }
@@ -64,7 +64,7 @@ public class GamePreferencesMenueView implements Serializable {
         System.out.println("\n\t===============================================================");
         System.out.println("\tEnter the letter associated with one of the following commands:");
 
-        for (int i = 0; i < GamePreferencesMenueView.menuItems.length; i++) {
+        for (int i = 0; i < GamePreferencesMenuView.menuItems.length; i++) {
             System.out.println("\t   " + menuItems[i][0] + "\t" + menuItems[i][1]);
         }
         System.out.println("\t===============================================================\n");
