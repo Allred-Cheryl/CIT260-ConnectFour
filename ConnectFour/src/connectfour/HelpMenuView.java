@@ -34,7 +34,6 @@ public class HelpMenuView extends Menu {
     } 
     
     // A function to get the player's input selection
-    @Override
     public void getInput() {       
               
         String command;
