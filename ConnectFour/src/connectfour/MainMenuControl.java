@@ -4,85 +4,41 @@
  * and open the template in the editor.
  */
 package connectfour;
-import java.io.Serializable;
+
 /**
  *
  * @author Cheryl Allred
  */
-public class MainMenuControl implements Serializable {
+public class MainMenuControl {
     
-    public void createPlayerList(){
-        GetPlayersListView getPlayersListView = new GetPlayersListView();
-        String[] listOfPlayersNames = getPlayersListView.getInput();
-        
-        Player[] playerList = new Player[listOfPlayersNames.length];
-        
-        for (int i = 0; i < playerList.length; i++){
-            String playersName = listOfPlayersNames[i];
-            Player newPlayer = new Player();
-            newPlayer.name = playersName;
-            playerList[i] = newPlayer;
-        }
-        
-        ConnectFour.setPlayerList(playerList);
-    }
-     
-    public void startGame(long noPlayers) {
-                
-        if (noPlayers != 1  &&  noPlayers != 2) {
-            new ConnectFourError().displayError("startGame - invalid number of players specified.");
-            return;
-        }
-        
-        Game game;
-        if (noPlayers == 1) {
-            game = this.create("ONE_PLAYER");
-        }
-        else {
-            game = this.create("TWO_PLAYER");
-        }
-
-        GameMenuView gameMenu = new GameMenuView(game);
-        gameMenu.getInput();
-    }
-
+    private static final String PLAYER_A_DEFAULT_MARKER = "R";
+    private static final String PLAYER_B_DEFAULT_MARKER = "B";
     
-    
-    public Game create(String gameType) {
+    public Game create(String gameType){
         Game game = null;
         Player player1 = null;
         Player player2 = null;
         
-        if (gameType == null) {
-            new ConnectFourError().displayError("MainCommands - create: gameType is null");
-            return null;
+        if (gameType == null){
+            throw new IllegalArgumentException ("MainCommands - create: gameType is null");
         }
         
-        if (gameType.equals(Game.ONE_PLAYER)) {
+        if (gameType.equals(Game.ONE_PLAYER)){
             game = new Game(Game.ONE_PLAYER);
-            player1 = new Player(Player.REGULAR_PLAYER, Game.PLAYER_A_DEFAULT_MARKER);
-            player1.name= "Player 1";
-            player2 = new Player(Player.COMPUTER_PLAYER, Game.PLAYER_B_DEFAULT_MARKER);
-            player2.name= "Computer";
+            player1 = new Player(Player.REGULAR_PLAYER, PLAYER_A_DEFAULT_MARKER);
+            player2 = new Player(Player.COMPUTER_PLAYER, PLAYER_B_DEFAULT_MARKER);
         }
-        else if (gameType.equals(Game.TWO_PLAYER)) {
+        else if (gameType.equals(Game.TWO_PLAYER)){
             game = new Game(Game.TWO_PLAYER);
-            player1 = new Player(Player.REGULAR_PLAYER, Game.PLAYER_A_DEFAULT_MARKER);
-            player1.name="Player 1";
-            player2 = new Player(Player.REGULAR_PLAYER, Game.PLAYER_B_DEFAULT_MARKER);
-            player2.name="Player 2";
-
+            player1 = new Player(Player.REGULAR_PLAYER, PLAYER_A_DEFAULT_MARKER);
+            player2 = new Player(Player.REGULAR_PLAYER, PLAYER_B_DEFAULT_MARKER);
         }
-      
-        game.playerA = player1;
-        game.playerB = player2;
+        
+        game.setPlayerA(player1);
+        game.setPlayerB(player2);
+        
+        game.setStatus(Game.CONTINUE);
         
         return game;
-    } 
-    
-    public void displayHelpMenu() {
-        HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.getInput();
     }
-    
 }
