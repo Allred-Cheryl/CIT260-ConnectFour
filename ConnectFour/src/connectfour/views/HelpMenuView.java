@@ -6,7 +6,7 @@
 package connectfour.views;
 
 import connectfour.ConnectFourError;
-import connectfour.HelpMenuControl;
+import connectfour.controls.HelpMenuControl;
 import connectfour.Menu;
 import java.util.Scanner;
 

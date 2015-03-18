@@ -3,9 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package connectfour;
+package connectfour.controls;
 
 
+import connectfour.Board;
+import connectfour.ConnectFourError;
+import connectfour.Game;
+import connectfour.Player;
 import connectfour.views.HelpMenuView;
 import connectfour.views.GetLocationView;
 import connectfour.views.GamePreferencesMenuView;

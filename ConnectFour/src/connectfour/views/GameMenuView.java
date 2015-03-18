@@ -8,7 +8,7 @@ package connectfour.views;
 
 import connectfour.ConnectFourError;
 import connectfour.Game;
-import connectfour.GameMenuControl;
+import connectfour.controls.GameMenuControl;
 import connectfour.Menu;
 import java.util.Scanner;
 /**

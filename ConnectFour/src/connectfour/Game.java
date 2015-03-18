@@ -31,7 +31,7 @@ public class Game {
     public Player otherPlayer;
     private Player winner;
     private Player loser;
-    String status;
+    public String status;
     public Board board;
    
 
