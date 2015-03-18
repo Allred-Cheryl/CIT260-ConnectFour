@@ -6,6 +6,10 @@
 package connectfour;
 
 
+import connectfour.views.HelpMenuView;
+import connectfour.views.GetLocationView;
+import connectfour.views.GamePreferencesMenuView;
+import connectfour.views.BoardView;
 import java.awt.Point;
 import java.util.ArrayList;
 import java.util.Random;
@@ -91,8 +95,9 @@ public class GameMenuControl {
     }
     
     public void displayHelpMenu() {
-        HelpMenuView helpMenu = new HelpMenuView();
-        HelpMenuView.getInput();
+        HelpMenuView helpMenu;
+        helpMenu = new HelpMenuView();
+//        HelpMenuView.getInput();
     }
 
     private boolean gameOver(Player player){

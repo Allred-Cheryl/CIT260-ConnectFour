@@ -3,8 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package connectfour;
+package connectfour.views;
 
+import connectfour.ConnectFourError;
+import connectfour.Game;
+import connectfour.GamePreferencesMenuControl;
+import connectfour.Menu;
 import java.util.Scanner;
 
 /**
@@ -28,9 +32,6 @@ public class GamePreferencesMenuView extends Menu {
         gamePreferenceControl = new GamePreferencesMenuControl(game);
     }
 
-    GamePreferencesMenuView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     @Override
     public void getInput() {       
         String command;

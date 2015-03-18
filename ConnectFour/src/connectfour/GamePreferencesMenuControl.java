@@ -5,6 +5,8 @@
  */
 package connectfour;
 
+import connectfour.views.GetMarkerView;
+import connectfour.views.GetDimensionsView;
 import java.awt.Dimension;
 import java.io.Serializable;
 

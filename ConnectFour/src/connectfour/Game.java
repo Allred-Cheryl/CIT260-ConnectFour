@@ -24,15 +24,15 @@ public class Game {
     public static final String ERROR = "ERROR";
     public static final String EXIT = "EXIT";
 
-    String gameType;
-    Player playerA;
-    Player playerB;
-    Player currentPlayer;
-    Player otherPlayer;
+    public String gameType;
+    public Player playerA;
+    public Player playerB;
+    public Player currentPlayer;
+    public Player otherPlayer;
     private Player winner;
     private Player loser;
     String status;
-    Board board;
+    public Board board;
    
 
     

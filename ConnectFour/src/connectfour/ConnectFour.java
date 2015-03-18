@@ -5,6 +5,9 @@
  */
 package connectfour;
 
+import connectfour.views.MainMenuView;
+import connectfour.views.HelpMenuView;
+import connectfour.views.GamePreferencesMenuView;
 import java.io.Serializable;
 import java.util.Scanner;
 /**
@@ -62,7 +65,7 @@ public class ConnectFour implements Serializable {
         //Erin was here
         ConnectFour connectFour = new ConnectFour();
         connectFour.display();
-        ConnectFour.playerList = connectFour.getPlayerNames();        
+//        ConnectFour.playerList = connectFour.getPlayerNames();        
         MainMenuView mainMenu = new MainMenuView();
         mainMenu.getInput();
     }  

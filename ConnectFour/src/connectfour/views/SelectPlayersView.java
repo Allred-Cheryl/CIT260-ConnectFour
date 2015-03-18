@@ -3,8 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package connectfour;
+package connectfour.views;
 
+import connectfour.ConnectFour;
+import connectfour.ConnectFourError;
+import connectfour.Game;
+import connectfour.Player;
 import java.io.Serializable;
 import java.util.Scanner;
 

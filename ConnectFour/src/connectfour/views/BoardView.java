@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package connectfour;
+package connectfour.views;
 
+import connectfour.Board;
+import connectfour.Player;
 import java.io.Serializable;
 
 /**
