@@ -29,7 +29,7 @@ public class MainMenuView extends Menu {
     }
  
     @Override
-    public void getInput() {       
+    public void getInput()  {       
 
         String command;
         Scanner inFile = new Scanner(System.in);

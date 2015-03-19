@@ -8,7 +8,7 @@ package connectfour;
  *
  * @author Erin
  */
-public abstract class Menu {
+public abstract class Menu extends connectfour.controls.MainMenuControl {
     private String[][] menuItems = null;
     
     public Menu() {

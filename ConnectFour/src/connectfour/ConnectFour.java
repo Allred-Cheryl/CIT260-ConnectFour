@@ -19,9 +19,9 @@ public class ConnectFour implements Serializable {
          
     private static final Scanner inFile = new Scanner(System.in);
     private static final HelpMenuView helpMenu = new HelpMenuView();
-
-    private static final GamePreferencesMenuView GamePreferencesMenu = new GamePreferencesMenuView();
     
+    private static final GamePreferencesMenuView GamePreferencesMenu = new GamePreferencesMenuView();
+
     private static Player[] playerList;
 
 
