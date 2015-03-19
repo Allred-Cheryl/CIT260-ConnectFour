@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package connectfour.views;
-import connectfour.ConnectFourError;
+import connectfour.controls.ConnectFourError;
 import java.io.Serializable;
 import java.util.Scanner;
 /**

@@ -5,16 +5,15 @@
  */
 package connectfour.views;
 
-import connectfour.Board;
-import connectfour.Player;
-import java.io.Serializable;
-
+import connectfour.models.Board;
+import connectfour.models.Player;
+import connectfour.interfaces.DisplayInfo;
 /**
  *
  * @author Cheryl Allred
  */
-public class BoardView implements Serializable 
-{
+public class BoardView implements DisplayInfo { 
+
     
     
     Board board;

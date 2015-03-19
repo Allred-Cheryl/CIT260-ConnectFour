@@ -3,15 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package connectfour;
-
-import java.util.Scanner;
-import java.io.Serializable;
+package connectfour.controls;
+import connectfour.interfaces.DisplayInfo;
 /**
  *
  * @author Luis
  */
-public class ConnectFourError implements Serializable {
+public class ConnectFourError implements DisplayInfo {
     
  
     

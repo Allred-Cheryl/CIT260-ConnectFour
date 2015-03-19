@@ -6,10 +6,9 @@
 package connectfour.controls;
 
 
-import connectfour.Board;
-import connectfour.ConnectFourError;
-import connectfour.Game;
-import connectfour.Player;
+import connectfour.models.Board;
+import connectfour.models.Game;
+import connectfour.models.Player;
 import connectfour.views.HelpMenuView;
 import connectfour.views.GetLocationView;
 import connectfour.views.GamePreferencesMenuView;

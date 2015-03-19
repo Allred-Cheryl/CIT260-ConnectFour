@@ -5,8 +5,8 @@
  */
 package connectfour.controls;
 
-import connectfour.Game;
-import connectfour.Player;
+import connectfour.models.Game;
+import connectfour.models.Player;
 
 /**
  *

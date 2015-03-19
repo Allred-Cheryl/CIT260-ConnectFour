@@ -5,10 +5,10 @@
  */
 package connectfour.views;
 
-import connectfour.ConnectFour;
-import connectfour.ConnectFourError;
-import connectfour.Game;
-import connectfour.Player;
+import connectfour.controls.ConnectFour;
+import connectfour.controls.ConnectFourError;
+import connectfour.models.Game;
+import connectfour.models.Player;
 import java.io.Serializable;
 import java.util.Scanner;
 

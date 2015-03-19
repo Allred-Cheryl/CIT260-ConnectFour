@@ -3,7 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package connectfour;
+package connectfour.models;
+import connectfour.controls.ConnectFourError;
 import java.awt.Point;
 import java.io.Serializable;
 import javax.swing.table.AbstractTableModel;

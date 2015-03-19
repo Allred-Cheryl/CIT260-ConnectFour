@@ -6,10 +6,9 @@
 package connectfour.views;
 
 
-import connectfour.ConnectFourError;
-import connectfour.Game;
+import connectfour.controls.ConnectFourError;
+import connectfour.models.Game;
 import connectfour.controls.GameMenuControl;
-import connectfour.Menu;
 import java.util.Scanner;
 /**
  *

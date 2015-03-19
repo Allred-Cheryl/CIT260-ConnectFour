@@ -5,9 +5,8 @@
  */
 package connectfour.controls;
 
-import connectfour.ConnectFourError;
-import connectfour.Game;
-import connectfour.Player;
+import connectfour.models.Game;
+import connectfour.models.Player;
 import connectfour.views.GetMarkerView;
 import connectfour.views.GetDimensionsView;
 import java.awt.Dimension;
