@@ -75,7 +75,7 @@ private void printRow(int rowNumber,Player[] rowLocations){
 }
 
 public void display() {
-    //This function uses the DisplayInfo interface
+    //This function uses the DisplayInfo
 }
     
 
