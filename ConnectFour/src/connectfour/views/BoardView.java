@@ -73,6 +73,11 @@ private void printRow(int rowNumber,Player[] rowLocations){
          System.out.print(" " + letter + "  |");
          }
 }
+
+    @Override
+    public void display() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 
 }
