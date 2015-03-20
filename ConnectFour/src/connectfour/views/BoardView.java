@@ -73,6 +73,10 @@ private void printRow(int rowNumber,Player[] rowLocations){
          System.out.print(" " + letter + "  |");
          }
 }
+
+public void display() {
+    //This function uses the DisplayInfo interface
+}
     
 
 }
