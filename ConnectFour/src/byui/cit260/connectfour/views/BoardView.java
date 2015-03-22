@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package connectfour.views;
+package byui.cit260.connectfour.views;
 
-import connectfour.models.Board;
-import connectfour.models.Player;
-import connectfour.interfaces.DisplayInfo;
+import byui.cit260.connectfour.models.Board;
+import byui.cit260.connectfour.models.Player;
+import byui.cit260.connectfour.interfaces.DisplayInfo;
 /**
  *
  * @author Cheryl Allred

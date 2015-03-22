@@ -4,10 +4,10 @@
  * and open the template in the editor.
  */
 // Test Matrix at https://docs.google.com/document/d/1w9v48zJN81IyLJq5gkpEoRZmjPCXXgMBTYZF0ze99TY/edit?usp=sharing
-package connectfour.views;
-import connectfour.controls.ConnectFourError;
-import connectfour.models.Game;
-import connectfour.models.Player;
+package byui.cit260.connectfour.views;
+import byui.cit260.connectfour.controls.ConnectFourError;
+import byui.cit260.connectfour.models.Game;
+import byui.cit260.connectfour.models.Player;
 import java.util.Scanner;
 import java.io.Serializable;
 /**

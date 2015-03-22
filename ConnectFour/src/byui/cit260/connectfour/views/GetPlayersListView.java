@@ -3,8 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package connectfour.views;
-import connectfour.controls.ConnectFourError;
+package byui.cit260.connectfour.views;
+import byui.cit260.connectfour.controls.ConnectFourError;
 import java.io.Serializable;
 import java.util.Scanner;
 /**

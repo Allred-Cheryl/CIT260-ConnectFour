@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package connectfour.controls;
+package byui.cit260.connectfour.controls;
 
-import connectfour.models.Game;
-import connectfour.models.Player;
+import byui.cit260.connectfour.models.Game;
+import byui.cit260.connectfour.models.Player;
 
 /**
  *

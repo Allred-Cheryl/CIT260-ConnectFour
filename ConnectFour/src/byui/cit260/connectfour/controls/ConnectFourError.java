@@ -3,8 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package connectfour.controls;
-import connectfour.interfaces.DisplayInfo;
+package byui.cit260.connectfour.controls;
+import byui.cit260.connectfour.interfaces.DisplayInfo;
 /**
  *
  * @author Luis

@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package connectfour.views;
+package byui.cit260.connectfour.views;
 /**
  *
  * @author Erin
  */
-public abstract class Menu extends connectfour.controls.MainMenuControl {
+public abstract class Menu extends byui.cit260.connectfour.controls.MainMenuControl {
     private String[][] menuItems = null;
     
     public Menu() {

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package connectfour.models;
+package byui.cit260.connectfour.models;
 
 import java.io.Serializable;
 

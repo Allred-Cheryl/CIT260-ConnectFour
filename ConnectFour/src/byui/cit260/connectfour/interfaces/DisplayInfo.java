@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package connectfour.interfaces;
+package byui.cit260.connectfour.interfaces;
 
 /**
  *
@@ -11,4 +11,4 @@ package connectfour.interfaces;
  */
 public interface DisplayInfo {
     void display();
-}
+} 
