@@ -49,8 +49,12 @@ public class MainMenuControl {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public void startGame(int i) {
-        
+    public void startGame(long noPlayers) {
+      
+      if(noPlayers!= 1 && noPlayers!= 2){
+        new ConnectFourError().display("startGame - please enter a valid number of players."); 
+        return;
+      }  
     }
 
     public void displayHelpMenu() {
