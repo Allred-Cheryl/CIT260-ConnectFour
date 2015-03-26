@@ -25,4 +25,8 @@ public class ConnectFourError implements DisplayInfo {
     public void display() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    void display(String startGame__please_enter_a_valid_number_of) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

@@ -7,6 +7,7 @@ package byui.cit260.connectfour.views;
 
 import byui.cit260.connectfour.controls.ConnectFourError;
 import byui.cit260.connectfour.controls.HelpMenuControl;
+import byui.cit260.connectfour.exceptions.MenuException;
 import java.util.Scanner;
 
 /**
@@ -44,7 +45,7 @@ public class HelpMenuView extends Menu {
         Scanner inFile = new Scanner(System.in);
         
         do {
-            
+           try {
             this.display(); // display the menu
             
             // get commaned entered
@@ -74,6 +75,10 @@ public class HelpMenuView extends Menu {
                     break;
                 default: 
                     new ConnectFourError().displayError("Invalid command. Please enter a valid command.");
+            }
+           }
+            catch (ConnectFourException e) {
+                    System.out.println("\n" + e.getMessage());
             }
         } while (!command.equals("Q"));  
         

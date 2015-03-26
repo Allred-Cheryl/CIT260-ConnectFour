@@ -4,6 +4,12 @@
  * and open the template in the editor.
  */
 package byui.cit260.connectfour.views;
+
+import byui.cit260.connectfour.controls.ConnectFour;
+import byui.cit260.connectfour.enums.ErrorType;
+import byui.cit260.connectfour.exceptions.MenuException;
+import byui.cit260.connectfour.exceptions.ConnectFourException;
+import java.util.Scanner;
 /**
  *
  * @author Erin
@@ -31,6 +37,33 @@ public final void display() {
     }
     System.out.println("\t================================================================");
 }
+private boolean validCommand(String command) {
+        String[][] items = this.menuItems;
+
+        for (String[] item : this.menuItems) {
+            if (item[0].equals(command)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    protected final String getCommand() throws ConnectFourException {
+
+        Scanner inFile = ConnectFour.getInputFile();
+        String command;
+        boolean valid = false;
+        do {
+            command = inFile.nextLine();
+            command = command.trim().toUpperCase();
+            valid = validCommand(command);
+            if (!validCommand(command)) {
+                throw new ConnectFourException(ErrorType.ERROR105.getMessage());  
+            }
+            return command;
+                
+        } while (!valid);
+    }
 
     /**
      *
