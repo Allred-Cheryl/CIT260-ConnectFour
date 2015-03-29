@@ -7,6 +7,7 @@ package byui.cit260.connectfour.views;
 
 import byui.cit260.connectfour.controls.ConnectFourError;
 import byui.cit260.connectfour.controls.HelpMenuControl;
+import byui.cit260.connectfour.exceptions.ConnectFourException;
 import byui.cit260.connectfour.exceptions.MenuException;
 import java.util.Scanner;
 

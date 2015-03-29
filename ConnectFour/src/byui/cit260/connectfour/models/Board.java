@@ -5,6 +5,8 @@
  */
 package byui.cit260.connectfour.models;
 import byui.cit260.connectfour.controls.ConnectFourError;
+import byui.cit260.connectfour.enums.ErrorType;
+import byui.cit260.connectfour.exceptions.GameException;
 import java.awt.Point;
 import java.io.Serializable;
 import javax.swing.table.AbstractTableModel;
@@ -89,12 +91,11 @@ public class Board extends AbstractTableModel implements Serializable {
         }
     }
     
-       public void occupyLocation(Player player, int row, int column) {
+       public void occupyLocation(Player player, int row, int column) throws GameException{
         Player playerAtLocation = this.boardLocations[row][column];
 
         if (playerAtLocation != null) { // location already occupied
-            new ConnectFourError().displayError("This location is already occupied. "
-                    + "Try a different location.");
+            throw new GameException(ErrorType.ERROR203.getMessage());
         }
         this.boardLocations[row][column] = player;
     }

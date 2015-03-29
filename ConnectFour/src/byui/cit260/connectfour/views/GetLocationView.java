@@ -6,6 +6,8 @@
 package byui.cit260.connectfour.views;
 import byui.cit260.connectfour.models.Board;
 import byui.cit260.connectfour.controls.ConnectFourError;
+import byui.cit260.connectfour.enums.ErrorType;
+import byui.cit260.connectfour.exceptions.GameException;
 import byui.cit260.connectfour.models.Game;
 import java.awt.Point;
 import java.util.Scanner;
@@ -23,14 +25,14 @@ public class GetLocationView {
     public GetLocationView(Game game) {
         this.game = game;
     }
-    public Point getInput(){
+    public Point getInput() throws GameException{
         Scanner inFile = new Scanner(System.in); // get input file 
 
         String[] coordinates;
         Point location = null;
         
         boolean valid = false;
-        
+        try {
         while(!valid){
             System.out.println("\n\n\t" + this.game.currentPlayer.name + " it is your turn."
                 + " Enter a row and column number (For example: 1 3)");
@@ -42,23 +44,17 @@ public class GetLocationView {
             coordinates = strRowColumn.split("\\s"); // tokenize the string
 
             if (coordinates.length < 1) { // no coordinates specified
-                new ConnectFourError().displayError(
-                        "You must enter two numbers, a row and the column, "
-                        + "or a \"Q\" to quit. Try again.");
-                continue;
+                throw new GameException(ErrorType.ERROR109.getMessage());
             }    
 
             else if (coordinates.length == 1) { // only one coordinate
                 if (coordinates[0].toUpperCase().equals("Q")) { // Quit?
                     return null;
                 } else { // wrong number of values entered.
-                    new ConnectFourError().displayError(
-                        "You must enter two numbers, a row and the column, "
-                        + "or a \"Q\" to quit. Try again.");
-                    continue;
+                    throw new GameException(ErrorType.ERROR109.getMessage());
                 }
             }
-
+            
             // user java regular expression to check for valid integer number?
             String regExpressionPattern = ".*\\d.*";
             if (!coordinates[0].matches(regExpressionPattern) ||
@@ -71,6 +67,7 @@ public class GetLocationView {
             
             // convert each of the cordinates from a String type to 
             // an integer type
+            try {
             int row = Integer.parseInt(coordinates[0]);
             int column = Integer.parseInt(coordinates[1]);
                      
@@ -96,8 +93,16 @@ public class GetLocationView {
 
             valid = true; // a valid location was entered
 
-        } 
-        
+        } catch (NumberFormatException nfex) {
+                    throw new GameException(ErrorType.ERROR109.getMessage());
+                }
+        }
+          } catch (GameException pex) {
+            System.out.println(pex.getMessage());
+            return null;
+        } catch (Exception e) {
+            e.printStackTrace();
+        };
         return location;
             
     }

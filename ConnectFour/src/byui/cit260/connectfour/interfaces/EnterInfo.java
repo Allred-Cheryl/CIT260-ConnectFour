@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package byui.cit260.connectfour.interfaces;
+import byui.cit260.connectfour.exceptions.ConnectFourException;
 
 /**
  *
