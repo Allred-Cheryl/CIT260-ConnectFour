@@ -5,12 +5,15 @@
  */
 package byui.cit260.connectfour.frames;
 
+import byui.cit260.connectfour.controls.MainMenuControl;
+import byui.cit260.connectfour.models.Game;
+
 /**
  *
  * @author Erin
  */
 public class MainFrame extends javax.swing.JFrame {
-
+    private MainMenuControl mainCommands = new MainMenuControl();
     /**
      * Creates new form MainFrame
      */
