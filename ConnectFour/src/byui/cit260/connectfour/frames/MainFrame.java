@@ -6,6 +6,7 @@
 package byui.cit260.connectfour.frames;
 
 import byui.cit260.connectfour.controls.MainMenuControl;
+import byui.cit260.connectfour.enums.GameType;
 import byui.cit260.connectfour.models.Game;
 
 /**
@@ -172,7 +173,10 @@ public class MainFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void player1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_player1ActionPerformed
-        // TODO add your handling code here:
+        Game game = this.mainCommands.create(GameType.ONE_PLAYER);
+        EnterPlayerNames enterPlayerNames = new EnterPlayerNames(game);
+        enterPlayerNames.initializeForm();
+        enterPlayerNames.setVisible(true);
     }//GEN-LAST:event_player1ActionPerformed
 
     private void quitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quitActionPerformed

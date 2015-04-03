@@ -5,6 +5,8 @@
  */
 package byui.cit260.connectfour.frames;
 
+import byui.cit260.connectfour.models.Game;
+
 /**
  *
  * @author Erin
@@ -16,6 +18,10 @@ public class EnterPlayerNames extends javax.swing.JFrame {
      */
     public EnterPlayerNames() {
         initComponents();
+    }
+
+    EnterPlayerNames(Game game) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     /**
@@ -173,4 +179,8 @@ public class EnterPlayerNames extends javax.swing.JFrame {
     private javax.swing.JPanel namePanel;
     private javax.swing.JPanel nameTitle;
     // End of variables declaration//GEN-END:variables
+
+    void initializeForm() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

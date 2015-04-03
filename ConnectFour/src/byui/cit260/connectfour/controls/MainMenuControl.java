@@ -5,6 +5,7 @@
  */
 package byui.cit260.connectfour.controls;
 
+import byui.cit260.connectfour.enums.GameType;
 import byui.cit260.connectfour.models.Game;
 import byui.cit260.connectfour.models.Player;
 
@@ -58,6 +59,10 @@ public class MainMenuControl {
     }
 
     public void displayHelpMenu() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public Game create(GameType gameType) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

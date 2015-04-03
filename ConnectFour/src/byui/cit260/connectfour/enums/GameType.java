@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package byui.cit260.connectfour.frames;
+package byui.cit260.connectfour.enums;
 
 /**
  *
  * @author Cheryl Allred
  */
-class PlayerNameFrame {
-    
+public enum GameType { ONE_PLAYER,
+                       TWO_PLAYER;
 }
