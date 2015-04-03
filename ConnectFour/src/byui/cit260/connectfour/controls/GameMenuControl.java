@@ -6,6 +6,7 @@
 package byui.cit260.connectfour.controls;
 
 
+import byui.cit260.connectfour.exceptions.GameException;
 import byui.cit260.connectfour.models.Board;
 import byui.cit260.connectfour.models.Game;
 import byui.cit260.connectfour.models.Player;
@@ -16,6 +17,8 @@ import byui.cit260.connectfour.views.BoardView;
 import java.awt.Point;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -127,30 +130,39 @@ public class GameMenuControl {
     
     private int regularPlayerTurn(Player player){
         
-        if(!this.game.status.equals(Game.NEW_GAME) &&
-           !this.game.status.equals(Game.PLAYING)){
-           new ConnectFourError().displayError(
-                    "There is no active game. You must start a new game before "
-                    + "you can take a turn");
-           return -1;
+        try {
+            if(!this.game.status.equals(Game.NEW_GAME) &&
+                    !this.game.status.equals(Game.PLAYING)){
+                new ConnectFourError().displayError(
+                        "There is no active game. You must start a new game before "
+                                + "you can take a turn");
+                return -1;
+            }
+            
+            this.game.status = Game.PLAYING;
+            
+            GetLocationView getLocationView = new GetLocationView(this.game);
+            Point location = getLocationView.getInput();
+            if (location == null){
+                return -1;
+            }
+            
+            this.game.board.occupyLocation(player, location.x, location.y);
+            
+            return 0;
+        } catch (GameException ex) {
+            Logger.getLogger(GameMenuControl.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        this.game.status = Game.PLAYING;
-        
-        GetLocationView getLocationView = new GetLocationView(this.game);
-        Point location = getLocationView.getInput();
-        if (location == null){
-            return -1;
-        }
-        
-        this.game.board.occupyLocation(player, location.x, location.y);
-        
         return 0;
     }
     
     private void computerTakesTurn(Player player){
-        Point location = this.getComputersSelection();
-        this.game.board.occupyLocation(player, location.x, location.y);
+        try {
+            Point location = this.getComputersSelection();
+            this.game.board.occupyLocation(player, location.x, location.y);
+        } catch (GameException ex) {
+            Logger.getLogger(GameMenuControl.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
     public void alternatePlayers(){

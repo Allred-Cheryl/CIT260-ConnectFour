@@ -42,7 +42,7 @@ public class HelpMenuView extends Menu {
     
     @Override
     public void getInput() {
-        String command;
+        String command = null;
         Scanner inFile = new Scanner(System.in);
         
         do {

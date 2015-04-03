@@ -1,6 +1,8 @@
 //renamed packages to show hierarchy--Erin
 package byui.cit260.connectfour.controls;
 
+import byui.cit260.connectfour.enums.ErrorType;
+import byui.cit260.connectfour.frames.MainFrame;
 import byui.cit260.connectfour.models.Player;
 import byui.cit260.connectfour.views.MainMenuView;
 import byui.cit260.connectfour.views.HelpMenuView;
@@ -13,6 +15,8 @@ import java.util.Scanner;
  * Fixed minor spelling issue/grammar by Kevin on 03/07/15
  */
 public class ConnectFour implements Serializable {
+            public static MainFrame mainFrame = null;
+
          
     private static final Scanner inFile = new Scanner(System.in);
     private static final HelpMenuView helpMenu = new HelpMenuView();
@@ -59,12 +63,31 @@ public class ConnectFour implements Serializable {
      * @param args
      */
     public static void main(String[] args) {
-        //Erin was here
-        ConnectFour connectFour = new ConnectFour();
-        connectFour.display();
-//        ConnectFour.playerList = connectFour.getPlayerNames();        
-        MainMenuView mainMenu = new MainMenuView();
-        mainMenu.getInput();
+        //Cheryl was here
+          ConnectFour connectFour = null;
+        try {  
+            connectFour = new ConnectFour();
+            
+              /* Create and display the form */
+            java.awt.EventQueue.invokeLater(new Runnable() {
+                public void run() {
+                    ConnectFour.mainFrame = new MainFrame();
+                    ConnectFour.mainFrame.setVisible(true);
+                }
+            });
+        } 
+
+        catch (Throwable ex) {     
+            ErrorType.displayErorrMsg("Unexpected error: " + ex.getMessage());
+            ErrorType.displayErorrMsg(ex.getStackTrace().toString());           
+        } 
+        finally {
+            if (ConnectFour.mainFrame != null) {
+                ConnectFour.mainFrame.dispose();
+            }
+        }
+        
+      
     }  
         public void display(){
             System.out.println(instructions);
