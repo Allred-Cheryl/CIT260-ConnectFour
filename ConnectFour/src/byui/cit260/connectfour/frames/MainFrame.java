@@ -79,6 +79,11 @@ public class MainFrame extends javax.swing.JFrame {
         helpMenu.setText("Help Menu");
 
         quit.setText("Exit");
+        quit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                quitActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jpMenuItemsLayout = new javax.swing.GroupLayout(jpMenuItems);
         jpMenuItems.setLayout(jpMenuItemsLayout);
@@ -166,6 +171,10 @@ public class MainFrame extends javax.swing.JFrame {
     private void player1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_player1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_player1ActionPerformed
+
+    private void quitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quitActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_quitActionPerformed
 
     /**
      * @param args the command line arguments
