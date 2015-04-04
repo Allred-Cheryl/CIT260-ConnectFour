@@ -179,6 +179,14 @@ public class MainFrame extends javax.swing.JFrame {
         enterPlayerNames.setVisible(true);
     }//GEN-LAST:event_player1ActionPerformed
 
+    private void player2ActionPerformed(java.awt.event.ActionEvent evt){
+        Game game = this.mainCommands.create(GameType.TWO_PLAYER);
+        
+    }
+    
+    private void helpActionPerformed(java.awt.event.ActionEvent evt){
+        
+    }
     private void quitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quitActionPerformed
         this.dispose();
     }//GEN-LAST:event_quitActionPerformed
